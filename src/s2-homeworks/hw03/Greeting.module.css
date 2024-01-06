@@ -44,6 +44,7 @@ color: #CC0000;
     text-transform: capitalize;
     background-color: #0066CC;
     padding: 5px 24px;
+    cursor: pointer;
 }
 
 .button:focus {

@@ -5,6 +5,7 @@
     border: 1px solid;
     border-radius: 3px;
     padding: 5px 24px;
+    cursor: pointer;
 }
 
 .disabled {
