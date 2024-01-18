@@ -1,15 +1,39 @@
 .radio {
+    position: relative;
+    margin-bottom: 22px;
 }
 
 .radio::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #000000;
 }
 
 
 .radio:checked::before {
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border: 3px solid #FFFFFF;
+    outline: 2px solid #000000;
 }
 
 .label {
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 145px;
+}
+
+.span {
+    padding-left: 21px;
 }
