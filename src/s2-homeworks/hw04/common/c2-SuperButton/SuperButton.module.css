@@ -9,9 +9,9 @@
 }
 
 .disabled {
-    color: #002E5C;
-    background-color: #004D99;
-    border-color: #004D99;
+    color: #fff;
+    background-color: #0066CC;
+    border-color: #0066CC;
 }
 
 .secondary {
@@ -62,4 +62,5 @@
 }
 
 .button:disabled {
+    opacity: 0.4;
 }
