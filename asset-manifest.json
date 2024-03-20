@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/autoHW-sprint2/static/css/main.58fe5ced.css",
-    "main.js": "/autoHW-sprint2/static/js/main.0bcae17a.js",
+    "main.css": "/autoHW-sprint2/static/css/main.94bb3675.css",
+    "main.js": "/autoHW-sprint2/static/js/main.5895de57.js",
     "static/js/787.66cb4309.chunk.js": "/autoHW-sprint2/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/autoHW-sprint2/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/200.svg": "/autoHW-sprint2/static/media/200.2b4de1542921864a6ecb8c3301ea4670.svg",
@@ -14,12 +14,15 @@
     "static/media/checked.svg": "/autoHW-sprint2/static/media/checked.0b6a1bcf5d417ff0a947.svg",
     "index.html": "/autoHW-sprint2/index.html",
     "static/media/burger.svg": "/autoHW-sprint2/static/media/burger.e4e6b98e4ee0b2dfcd76d02a9eed2e34.svg",
-    "main.58fe5ced.css.map": "/autoHW-sprint2/static/css/main.58fe5ced.css.map",
-    "main.0bcae17a.js.map": "/autoHW-sprint2/static/js/main.0bcae17a.js.map",
+    "static/media/Polygon 2.svg": "/autoHW-sprint2/static/media/Polygon 2.149a43327969905047f29def87978100.svg",
+    "static/media/down.svg": "/autoHW-sprint2/static/media/down.84608c11f30550bbfe9dc58dff6d4ddb.svg",
+    "static/media/up.svg": "/autoHW-sprint2/static/media/up.3f53e1ada336d4a2b89dabfb878c65f9.svg",
+    "main.94bb3675.css.map": "/autoHW-sprint2/static/css/main.94bb3675.css.map",
+    "main.5895de57.js.map": "/autoHW-sprint2/static/js/main.5895de57.js.map",
     "787.66cb4309.chunk.js.map": "/autoHW-sprint2/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58fe5ced.css",
-    "static/js/main.0bcae17a.js"
+    "static/css/main.94bb3675.css",
+    "static/js/main.5895de57.js"
   ]
 }
