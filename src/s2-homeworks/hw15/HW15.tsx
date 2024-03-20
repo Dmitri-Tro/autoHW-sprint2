@@ -50,37 +50,47 @@ const HW15 = () => {
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
-            .then((res) => {
+            .then(res => {
                 // делает студент
-
                 // сохранить пришедшие данные
-
-                //
+                if (res) {
+                    setTechs(res.data.techs);
+                    setTotalCount(res.data.totalCount)
+                }
+                setLoading(false)
             })
+
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
+        if (count === newCount) {
+            setPage(newPage)
+            sendQuery({sort, page: newPage, count: newCount})
+        } else {
+            setPage(1)
+            setCount(newCount)
+            sendQuery({sort, page: 1, count: newCount})
 
-        // setPage(
-        // setCount(
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        }
+        setSearchParams(prevSearchParams => {
+            const updatedSearchParams = new URLSearchParams(prevSearchParams);
+            updatedSearchParams.set('page', newPage.toString());
+            updatedSearchParams.set('count', newCount.toString());
+            return updatedSearchParams;
+        });
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
+        sendQuery({sort: newSort, page, count})
+        setSearchParams(prevSearchParams => {
+            const updatedSearchParams = new URLSearchParams(prevSearchParams);
+            updatedSearchParams.set('sort', newSort);
+            return updatedSearchParams;
+        });
     }
 
     useEffect(() => {

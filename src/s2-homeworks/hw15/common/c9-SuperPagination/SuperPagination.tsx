@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {ChangeEvent} from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
 import {Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
@@ -16,14 +16,22 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
         page, itemsCountForPage, totalCount, onChange, id = 'hw15',
     }
 ) => {
-    const lastPage = 10 // пишет студент // вычислить количество страниц
+    const lastPage = Math.ceil((totalCount / itemsCountForPage)) // пишет студент // вычислить количество страниц
 
-    const onChangeCallback = (event: any, page: number) => {
+    const onChangeCallback = (event: ChangeEvent<unknown>, page: number) => {
+
         // пишет студент
+        let newPage = page;
+        let newCount = itemsCountForPage;
+        if (event.type === 'change') {
+            newCount = Number((event as ChangeEvent<HTMLSelectElement>).currentTarget.value)
+        }
+        onChange(newPage, newCount)
     }
 
-    const onChangeSelect = (event: any) => {
+    const onChangeSelect = (event: ChangeEvent<HTMLSelectElement>) => {
         // пишет студент
+        onChangeCallback(event, page)
     }
 
     return (
@@ -32,6 +40,9 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                 id={id + '-pagination'}
                 sx={{
                     // стили для Pagination // пишет студент
+                    marginRight: '12px',
+                    width: '270px',
+
                 }}
                 page={page}
                 count={lastPage}
@@ -41,7 +52,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             />
 
             <span className={s.text1}>
-                показать
+                Показать
             </span>
 
             <SuperSelect
@@ -53,10 +64,11 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                     {id: 10, value: 10},
                 ]}
                 onChange={onChangeSelect}
+                className={s.superSelect}
             />
 
             <span className={s.text2}>
-                строк в таблице
+                {itemsCountForPage === 4 ? 'строки в таблице' : 'строк в таблице'}
             </span>
         </div>
     )
